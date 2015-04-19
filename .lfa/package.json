@@ -1,0 +1,14 @@
+{
+  "name": "ee3-demo-day",
+  "version": "1.0.0",
+  "keywords": [
+    "lfa-book"
+  ],
+  "book": {
+    "title": "EE3 Demo Day",
+    "language": "en"
+  },
+  "engines": {
+    "lfa": "~0.7.0"
+  }
+}
