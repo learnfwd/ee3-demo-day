@@ -1,21 +1,27 @@
 var App = require('lfa-core/app');
 var FakeNameGenerator = require('./fake-name-generator');
 
-FakeNameGenerator.generateRandomName();
+require('./asset-preloader'); // no need to store
+
+FakeNameGenerator.registerRandomName();
+
 var ClassMateList = require('lfa-classroom/views/classmate-list');
 var NameInput = require('lfa-classroom/views/name-input');
 
+App.storage.setItem('classroomCode', 'ee3');
+App.storage.setItem('classroomAutoconnect', 'true');
+
 App.book.on('render', function (opts) {
 
-  console.log('CHAPTER', opts.chapter);
-
-  React.render(
+  var studentList = document.getElementById('student-list');
+  studentList && React.render(
     React.createElement(ClassMateList, null),
-    document.getElementById('student-list')
+    studentList
   );
 
-  React.render(
+  var nameInput = document.getElementById('name-input');
+  nameInput && React.render(
     React.createElement(NameInput, null),
-    document.getElementById('name-input')
+    nameInput
   );
 });

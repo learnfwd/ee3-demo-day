@@ -7,3 +7,6 @@
 [submodule "plugins/classroom"]
 	path = plugins/classroom
 	url = git@github.com:learnfwd/lfa-addon-classroom.git
+[submodule "plugins/editor"]
+	path = plugins/editor
+	url = git@bitbucket.org:readfwd/content-editor-prototype.git
