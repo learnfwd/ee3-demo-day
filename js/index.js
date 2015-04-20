@@ -1,5 +1,15 @@
 var App = require('lfa-core/app');
+var FakeNameGenerator = require('./fake-name-generator');
+
+FakeNameGenerator.generateRandomName();
+var ClassMateList = require('lfa-classroom/views/classmate-list');
 
 App.book.on('render', function (opts) {
-  // Page has now changed to opts.chapter. Do something special
+
+  console.log('CHAPTER', opts.chapter);
+
+  React.render(
+    React.createElement(ClassMateList, null),
+    document.getElementById('student-list')
+  );
 });
