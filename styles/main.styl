@@ -1,27 +1,76 @@
 @import _avatar
+// colors
+highlight = #f60
+orange = #fbb03b
+green = #8cc63f
 
 body
   user-select: none
+  background-image: url('img/green-fibers.png')
+
+
+.menu-item:hover
+  background-color: green
 
 // Cover page
+#textbook
+  background: rgba(253,253,253,1)
 
-.cover-page
-  .name-input
-    text-align: center;
-  .classroom-client
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-size: 1em;
-    display: inline-block;
-    padding-right: 10px
-    max-width: 250px;
-    text-overflow: ellipsis;
+#home-cover
+  background: url('img/bg/14625076141_d0f2e43579_b.jpg')
+  background-size: cover
+  min-height: 100vh
+  .goto
+    // display: block
+    text-align: center
+    padding-top: 1em
+    padding-bottom: 1.5em
+    color: white
+    background: black
+    p
+      font-size: 2.5em
+      display: inline-block
+      border-bottom: 2px dashed white
+      margin: 0
+      padding: 0
+  .cover-page
+    padding: 1em;
+    #name-input
+      // text-align: center;
+      margin-left: -0.7em;
+      input 
+        padding-left: 0.3em
+        font-size: 1.8em
+        background: transparent
+        border: 1px dashed #ccc
+        &:hover
+          border: 1px solid orange
+    .small
+      margin-left: 0px
+      padding-left: 0px
 
-    color: #006100;
-    .away-label, .teacher-label
-      display: none;
+    .classroom-client
+      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+      font-size: 1em;
+      display: inline-block;
+      padding-right: 10px
+      width: auto;
+      text-overflow: ellipsis;
+      border: 1px solid #ccc;
 
-    &.classroom-client-away
-      color: #ff6600;
+      color: #006100;
+      // .away-label, .teacher-label
+        // display: none;
+
+      &.classroom-client-away
+        color: #ff6600;
+        
+      .ring-bell
+        padding-left: .5em
+        padding-right: .5em
+        margin: 0
+        &:hover
+          color: orange
 
 // Exercises
 
