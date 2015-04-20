@@ -1,8 +1,42 @@
 +title('How It Works')
+h1 Show how it works.
+
++exercise
+  .progress-box
+
+  +pickone(3, ["1965", "1979", "1989", "1991"], {
+    name: 'ee3-demo-romanian-revolution',
+    popup: false,
+    irritationLevel: 5,
+    buttonStyles: 'pauls-custom-style',
+    hints: {
+      1: 'It is the same year as the fall of the Berlin Wall',
+      3: 'It was abut 30 years ago...'
+    },
+  })
+    p When did the Romanian revolution take place?
+      | 
+      span.is-done-box
+    .row
+      .pickone-buttons
+
+  +pickone(2, ["1965", "1979", "1989", "1993"], {
+    name: 'ee3-demo-iranian-revolution',
+    popup: false,
+    buttonStyles: 'pauls-custom-style',
+    irritationLevel: 5,
+    hints: {
+      1: 'Try harder',
+      3: 'About 10 years before the Romanian revolution'
+    },
+  })
+    p When did the Iranian revolution take place? 
+      | 
+      span.is-done-box
+    .row.btn-group
+      .pickone-buttons
 
 :markdown
-  # Show how it works.
-
   03:40 [+01:40]
 
   First of all, we've made it dead easy to use: there are only four buttons and we'll lose three in our next release.  
