@@ -11,20 +11,22 @@ var ClassroomStore = require('lfa-classroom/classroom-store');
 var ClasroomActions = require('lfa-classroom/classroom-actions');
 
 function generateRandomName() {
+  return  fakeNames.first[Math.floor(Math.random() * firstNameCount)] + ' ' +
+    'ABCDEFGHIJKLMNOPQURSTUVWXYZ'.substr(Math.floor(27 * Math.random()),1) + '. ' +
+    fakeNames.last[Math.floor(Math.random() * lastNameCount)];
+}
+
+function registerRandomName() {
   if(ClassroomStore.getDisplayName().substr(0,7) !== 'Student') {
     return; // if  it was not initialized
   }
 
-  var name =
-    fakeNames.first[Math.floor(Math.random() * firstNameCount)] + ' ' +
-    'ABCDEFGHIJKLMNOPQURSTUVWXYZ'.substr(Math.floor(27 * Math.random()),1) + '. ' +
-    fakeNames.last[Math.floor(Math.random() * lastNameCount)];
-
-  ClasroomActions.changeDisplayName(name)
+  ClasroomActions.changeDisplayName(generateRandomName())
 
 };
 
 module.exports = {
+  registerRandomName: registerRandomName,
   generateRandomName: generateRandomName
 }
 
