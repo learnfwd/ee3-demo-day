@@ -2,13 +2,14 @@
 .header.full
   p How it works.
 
-.container-fluid
-  .row
-    .col-sm-6.col-sm-offset-3
-      +img('img/oup-grammar-laptop.png')
-      p simple, 4-button UI
-      p no login / setup / configuration
-      p simple classroom mode
+#laptop-works.row
+  .col-sm-6  
+    +img('img/oup-grammar-laptop.png')
+  .col-sm-6
+    ul
+      li simple, 4-button UI
+      li no login / setup / configuration
+      li simple classroom mode
 
 .teacher-visible
   :markdown
