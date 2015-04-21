@@ -6,44 +6,38 @@
   .question The Romanian Revolution
 
 +exercise
+  strong Test your knowledge
   .progress-box
 
-  +pickone(3, ["1965", "1979", "1989", "1991"], {
+  +pickone(3, ['1965', '1979', '1989', '1991'], {
     name: 'ee3-demo-romanian-revolution',
     popup: false,
     irritationLevel: 5,
-    buttonStyles: 'pauls-custom-style',
     hints: {
       1: 'It is the same year as the fall of the Berlin Wall',
       3: 'It was abut 30 years ago...'
-    },
+    }
   })
-    p When did the Romanian revolution take place?
+    p 1. When did the Romanian revolution take place?
       | 
       span.is-done-box
-    .row
+    center
       .pickone-buttons
 
-  +pickone(2, ["1965", "1979", "1989", "1993"], {
-    name: 'ee3-demo-iranian-revolution',
-    popup: false,
-    buttonStyles: 'pauls-custom-style',
-    irritationLevel: 5,
-    hints: {
-      1: 'Try harder',
-      3: 'About 10 years before the Romanian revolution'
-    },
-  })
-    p When did the Iranian revolution take place? 
-      | 
+  br 
+  +textline({name: 'ee3-demo-romanian-revolution-city', type: 'text', max: 30,
+      size: 20, regexp: /^\s*[T|t]imi[s|ș]oara\s*$/,
+      title: 'Is it Bucharest, Timișoara, Belgrade, Budapest?'
+    })
+    +statement
+      | 2. The Romanian Revolution started in the city of
+      span.input
       span.is-done-box
-    .row.btn-group
-      .pickone-buttons
+  br
 
 .teacher-visible
+  div(style="height:20em;")
   :markdown
-    03:40 [+01:40]
-
     First of all, we've made it dead easy to use: there are only four buttons and we'll lose three in our next release.  
 
     Second: no login or configuration necessary
@@ -52,29 +46,29 @@
 
     The feedback we've had so far is tremendous.
 
-    Let's see how it works. 
+    Let's see how it works.
 
-    You have already seen synchronised navigation. 
+    You have already seen synchronised navigation.
 
-    **Interactive**: We have intuitive re-flowable layouts, audio and video, interactions and all kinds of assessments. By solving the problem of re-flowable content, we’ve already surpassed 90% of e-textbooks in the world. 
+    **Interactive**: We have intuitive re-flowable layouts, audio and video, interactions and all kinds of assessments. By solving the problem of re-flowable content, we’ve already surpassed 90% of e-textbooks in the world.
 
     **Collaborative**: Now let's try answering the following question together:
 
-    ``` 
-      When did the Romanian Revolution take place? 
+    ```
+      When did the Romanian Revolution take place?
         A. 1965
         B. 1979
         C. 1989
         D. 1991
     ```
-    **Adaptive**: So, only [20%] of you answered correctly. You obviously need more information. The textbook is incomplete. Let's add some content. [copy-paste] 
+    **Adaptive**: So, only [20%] of you answered correctly. You obviously need more information. The textbook is incomplete. Let's add some content. [copy-paste]
 
     Hmm, how about a video? After all the Romanian revolution of 1989 was the first televised one. [add video]
-    
+
     That’s exactly how easy it is for teachers to *customise* their material.
-    
-    Now you all have this new content. It has been instantly updated on your devices. 
-    
+
+    Now you all have this new content. It has been instantly updated on your devices.
+
     By the way: there’s nobody else doing this trick out there, and this type of tools are going to revolutionise the industry. **That’s why we have the potential to disrupt the market .**
 
     We've created a unique tool that allows publishers to create and distribute this type of textbooks. And we've created the web services that make it easy and engaging for teachers to use in the classroom.
