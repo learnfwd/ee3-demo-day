@@ -1,23 +1,25 @@
 +title('What\'s the issue')
-.header.full
-  p The Problem
+//- .header.full
+//-   p The Problem
 
 
+.colored-box.full.blue
 
-.container-fluid
-  .question Only 
-    span.orange 10% 
-    | of UK teachers use textbooks!
+  .container-fluid
+    .row
+      .col-sm-10.col-sm-offset-1
+        .question Only 
+          span.orange 10% 
+          | of UK teachers use textbooks!
+    .row
+      .col-sm-6.col-sm-offset-3
+        +img('img/chart-10.png')
 
-  .row
-    .col-sm-6.col-sm-offset-3
-      +img('img/chart-10.png')
-
-  .question What are the other 
-    span.green 90% 
-    |  doing?
-  .scissors
-    +img('img/icon-cut.png')
+  //- .question What are the other 
+  //-   span.green 90% 
+  //-   |  doing?
+  //- .scissors
+  //-   +img('img/icon-cut.png')
 
 .teacher-unvisible
   :markdown
