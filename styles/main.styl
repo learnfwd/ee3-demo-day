@@ -18,6 +18,7 @@ body
 // Cover page
 #textbook
   background: rgba(255,255,255,1)
+  width: 100% !important
 
 #home-cover
   background: url('img/bg/14625076141_d0f2e43579_b.jpg') #b2bcb1 no-repeat
@@ -184,3 +185,35 @@ body
 
 .teacher-unvisible
   display: none
+
+.box
+  // background: black
+  display: block
+  padding: 1em
+  text-align: center
+  margin-bottom: 2em
+  p
+    display: inline-block
+    font-size: 1.5em
+    border: 1px solid black
+    // border-left: 5px solid green
+    padding: .5em
+    margin: 0em
+    text-align: right
+
+.colored-box
+  display: flex
+  min-height: 100vh
+  align-items: center
+  justify-content: center
+  &.red
+    background-color: #F44336
+    color: white
+  &.blue
+    background-color: #3F51B5
+    color: white
+
+  .question
+    padding: 0
+    margin: 0
+    font-size: 3em
