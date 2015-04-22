@@ -1,13 +1,15 @@
 +title('Interactive')
 
-.header.full
-  p Interactive.
+.row.adaptive-container
+  .col-xs-12.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.content-editor-ready.padding-1em
+    .header.full
+      p Interactive.
 
-center
-  p Drag and drop the following words to put them in the right order:
+    center
+      p Drag and drop the following words to put them in the right order:
 
-  +drag-and-sort({name: 'ee3-demo-interactive-1', scoreBox: true})
-    .item(data-index=3) unlocked!
-    .item(data-index=1) Content
-    .item(data-index=2) is
+      +drag-and-sort({name: 'ee3-demo-interactive-1', scoreBox: true})
+        .item(data-index=3) unlocked!
+        .item(data-index=1) Content
+        .item(data-index=2) is
 
