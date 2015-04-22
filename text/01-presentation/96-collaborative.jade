@@ -1,19 +1,21 @@
 +title('Collaborative')
 
-.header.full
-  p Collaborative
+.row.adaptive-container
+  .col-xs-12.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.content-editor-ready.padding-1em
+    .header.full
+      p Collaborative
 
-center
-  +textline({name: 'ee3-demo-collaborative-1', type: 'text', max: 10,
-    size: 10, regexp: /^\s*[s|S][e|E][r|R][v|V][i|I][c|C][e|E].*$/,
-    placeholder: 'type here...', ignoreAvatar:false})
-      p.center Best textbooks are
-      span.inline-block.input
-      span.inline-block.is-done-box
-  +textline({name: 'ee3-demo-collaborative-2', type: 'text', max: 10,
-    size: 10, regexp: /^\s*[p|P][r|R][o|O][d|D][u|U][c|C][t|T][s|S]\s*$/,
-    placeholder: 'type here...', ignoreAvatar:false})
-      p.center not
-      span.inline-block.input
-      span.inline-block.is-done-box
-
+    center
+      +textline({name: 'ee3-demo-collaborative-1', type: 'text', max: 10,
+        size: 10, regexp: /^\s*[s|S][e|E][r|R][v|V][i|I][c|C][e|E].*$/,
+        placeholder: 'type here...', ignoreAvatar:false})
+          p.center Best textbooks are
+          span.inline-block.input
+          span.inline-block.is-done-box
+      +textline({name: 'ee3-demo-collaborative-2', type: 'text', max: 10,
+        size: 10, regexp: /^\s*[p|P][r|R][o|O][d|D][u|U][c|C][t|T][s|S]\s*$/,
+        placeholder: 'type here...', ignoreAvatar:false})
+          p.center not
+          span.inline-block.input
+          span.inline-block.is-done-box
+      p &nbsp;
