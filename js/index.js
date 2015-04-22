@@ -1,6 +1,6 @@
 var App = require('lfa-core/app');
 var FakeNameGenerator = require('./fake-name-generator');
-
+var $ = require('bootstrap')
 require('./asset-preloader'); // no need to store
 
 FakeNameGenerator.registerRandomName();
@@ -24,4 +24,8 @@ App.book.on('render', function (opts) {
     React.createElement(NameInput, null),
     nameInput
   );
+  $('.footnote').popover({
+    html: true,
+    // container: 'body'
+  });
 });
