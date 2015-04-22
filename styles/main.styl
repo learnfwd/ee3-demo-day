@@ -108,10 +108,16 @@ body
     
 // Exercises
 
-.ee3-demo-romanian-revolution
+.ee3-demo-investors-buttons
   button:focus, button:active
     outline: 0 !important;
+    
+  .pickone-button-item
+    font-size: 1.2em;
+    margin: 0 10px 20px 10px
+    padding 10px 1.5em
 
+  
 .question
   font-size: 2em
   text-align: center
@@ -223,6 +229,25 @@ body
   &.teal
     background-color: #009688
     color: white
+  &.green
+    background-color: #1B5E20
+    color: white
+  &.light-green
+    background-color: #33691E
+    color: white
+  &.orange
+    background-color: #BF360C
+    color: white
+  &.light-blue
+    background-color: #01579B
+    color: white
+  &.brown
+    background-color: #4E342E
+    color: white
+  &.indigo
+    background-color: #3F51B5
+    color: white
+  
 
   .question
     margin: 0.1em auto
@@ -234,6 +259,8 @@ body
       border: 1px solid white
       display: inline-block
       padding: 0.2em
+    &.margin-top
+      margin-top: 2em
 
   @media (max-width: 767px)
     min-height: 85vh
@@ -247,3 +274,9 @@ body
   span.strikethrough
     text-decoration:line-through !important
     color: rgba(255,255,255,0.5)
+
+.flex
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
