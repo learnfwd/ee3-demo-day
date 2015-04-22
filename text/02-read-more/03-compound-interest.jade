@@ -49,27 +49,27 @@ form(onSubmit='return false;')
     strong#ch01s03ideal -
     | .
 p Feel free to input less than 1 minute in the box below.
-
-.table-responsive: table
-  thead
-    tr
-      th Payment frequency
-      th Value
-  tbody
-    tr
-      td Yearly
-      td#ch01s03yearly -
-    tr
-      td Monthly
-      td#ch01s03monthly -
-    tr
-      td Daily (non bisect yrs.)
-      td#ch01s03daily -
-    tr
-      td Each 
-        input(type='number', id='ch01s03interval', size='4', value='1440', style='width:3em')
-        | minutes
-      td#ch01s03custom -
+.compound
+  .table-responsive: table
+    thead
+      tr
+        th Payment frequency
+        th Value
+    tbody
+      tr
+        td Yearly
+        td#ch01s03yearly -
+      tr
+        td Monthly
+        td#ch01s03monthly -
+      tr
+        td Daily (non bisect yrs.)
+        td#ch01s03daily -
+      tr
+        td Each 
+          input(type='number', id='ch01s03interval', size='4', value='1440', style='width:3em')
+          | minutes
+        td#ch01s03custom -
 
 script.
   (function() {
@@ -126,8 +126,8 @@ h3
 .choices
   +exercise({name: 'compound00'})
     .progress-box
-    span
-      span.score-box
+      span
+        span.score-box
     +yesno({name: 'compound01', answer: true, yes: 'With Compounding', no: 'No Compounding'})
       .statement 1. When you deposit money, which type of interest is more beneficial to you?
       .row
@@ -155,7 +155,7 @@ h3
           placement: 'top'
         })
         .statement
-          span 4
+          span 4. 
           | Do you think it's better to get £ 2000 for your work on a project now
           | or accept the customer's proposal and get £ 2350 in twelve months time?
 
