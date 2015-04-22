@@ -3,13 +3,59 @@
 .header.full 
   p The Romanian Revolution
 p The 
-  strong Romanian Revolution
+  strong Romanian Revolution 
   span (Romanian: 
     em Revoluția Română
   | ) 
-  | was a period of violent civil unrest in Romania in December 1989 and part of the Revolutions of 1989 that occurred in several Warsaw Pact countries. The Romanian Revolution started in the city of Timișoara and soon spread throughout the country, ultimately culminating in the show trial and execution of longtime Communist leader Nicolae Ceaușescu, and the end of the 42 years of Communist rule in Romania. It was also the last removal of a Communist regime in a Warsaw Pact country during the events of 1989.
+  span was a period of violent civil unrest in Romania in December 1989 and part of the Revolutions of 1989 that occurred in several Warsaw Pact countries. 
+    +footnote("EUROPE Romania's bloody revolution. News.bbc.co.uk. Retrieved 2015-03-30") 
+div The Romanian Revolution started in the city of Timișoara and soon spread throughout the country, ultimately culminating in the show trial and execution of longtime Communist leader Nicolae Ceaușescu, and the end of the 42 years of Communist rule in Romania. It was also the last removal of a Communist regime in a Warsaw Pact country during the events of 1989.
 +youtube('I_lnqMe5d7c')
-+exercise({name: 'roumanian_revolution'})
+p The Romanian Revolution started in the city of Timișoara and soon spread throughout the country, ultimately culminating in the show trial and execution of longtime Communist leader Nicolae Ceaușescu, and the end of the 42 years of Communist rule in Romania. It was also the last removal of a Communist regime in a Warsaw Pact country during the events of 1989, and the only one that violently overthrew a country's government and executed its leader.
++exercise({name: 'roumanian_revolution_1'})
   h3 
     strong Test your knowledge
   .progress-box
+  +pickone(3, ['1965', '1979', '1989', '1991'], {
+    name: 'ee3-demo-romanian-revolution',
+    popup: false,
+    irritationLevel: 5,
+    hints: {
+      1: 'It is the same year as the fall of the Berlin Wall',
+      3: 'It was abut 30 years ago...'
+    }
+  })
+    p 1. When did the Romanian revolution take place?
+      | 
+      span.is-done-box
+    center
+      .pickone-buttons
+
+  br 
+  +textline({name: 'ee3-demo-romanian-revolution-city', type: 'text', max: 30,
+      size: 20, regexp: /^\s*[T|t]imi[s|ș]oara\s*$/,
+      title: 'Is it Bucharest, Timișoara, Belgrade, Budapest?'
+    })
+    +statement 
+      | 2. The Romanian Revolution started in the city of
+      span.input
+      span.is-done-box
+  br 
+  +textline({name: 'ee3-demo-romanian-revolution-city_1', type: 'text', max: 30,
+      size: 20, regexp: /^\s*[N|n]icolae [C|c]eau[ș|s]escu\s*$/,
+      title: 'Is it Bucharest, Timișoara, Belgrade, Budapest?'
+    })
+    +statement 
+      | 3. Communist leader was 
+      span.input
+      span.is-done-box
+  +pickone(2, ['1971', '1974', '1975', '1965'], {
+    name: 'ee3-demo-romanian-revolution',
+    popup: false,
+    irritationLevel: 5,
+  })
+    p 4. When Nicolae Ceausescu became the president of the Socialist Republic of Romania?
+      | 
+      span.is-done-box
+    center
+      .pickone-buttons
