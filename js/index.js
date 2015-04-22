@@ -4,7 +4,6 @@
 var App = require('lfa-core/app');
 var FakeNameGenerator = require('./fake-name-generator');
 var React = require('react');
-var $ = require('jquery')
 require('./asset-preloader'); // no need to store
 
 FakeNameGenerator.registerRandomName();
@@ -18,18 +17,18 @@ App.storage.setItem('classroomAutoconnect', 'true');
 App.book.on('render', function (/*opts*/) {
 
   var studentList = document.getElementById('student-list');
-  studentList && React.render(
-    React.createElement(ClassMateList, null),
-    studentList
-  );
+  if (studentList)  {
+    React.render(
+      React.createElement(ClassMateList, null),
+      studentList
+    );
+  }
 
   var nameInput = document.getElementById('name-input');
-  nameInput && React.render(
-    React.createElement(NameInput, null),
-    nameInput
-  );
-  $('.footnote').popover({
-    html: true,
-    // container: 'body'
-  });
+  if (nameInput) {
+    React.render(
+      React.createElement(NameInput, null),
+      nameInput
+    );
+  }
 });
