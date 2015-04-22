@@ -1,1 +1,194 @@
 +title("Compound interest")
+.header.full
+  p Compound interest
+div
+  strong Compound interest 
+  | is interest added to the principal of a deposit or loan so that the added interest also earns interest from then on. This addition of interest to the principal is called compounding.
+.row
+  .col-sm-6
+    div A bank account, for example, may have its interest compounded every year: in this case, an account with $1000 initial principal and 20% interest per year would have a balance of $1200 at the end of the first year, $1440 at the end of the second year, $1728 at the end of the third year, and so on.
+  .col-sm-6
+    +lightbox("img/compound_interest.png")
+    .small-text
+      em The effect of earning 20% annual interest on an initial $1,000 investment at various compounding frequencies
+p Compound interest may be contrasted with simple interest, where interest is not added to the principal (there is no compounding). Compound interest is standard in finance and economics, and simple interest is used infrequently (although certain financial products may contain elements of simple interest).
+p 
+  strong Interest playground
+
+p What does 0.5% mean?
+
+p See how much 0.5% interest increase or decrease can influence the total cost of a loan or the gain for an investment in time. Replace the numbers below with yours and have fun observing the impact.
+
+
+form(onSubmit='return false;')
+  p.ch01s02sample 
+    br
+    | If you invest £ 
+    input(type='number', id='ch01s02amount', size='4', value='100')
+    | 
+    | today, with an interest of 
+    input(type='number', id='ch01s02interest', size='4', value='4.2')
+    | % per year, in 
+    input(type='number', id='ch01s02years', size='4', value='22')
+    | 
+    | years you'll have £ 
+    span#ch01s02total
+    | 
+    | at the end.
+    span#ch01s02difference
+  small
+    em Pssst! You can use up and down arrows to decrease / increase amounts by 1.
+
+p
+  strong Compound or not Compound ?
+
+form(onSubmit='return false;')
+  p.ch01s03sample For the above values, here are the three amounts you'll get
+    | back at the end.
+    | Compare with the ideal value, which is 
+    strong#ch01s03ideal -
+    | .
+p Feel free to input less than 1 minute in the box below.
+
+.table-responsive: table
+  thead
+    tr
+      th Payment frequency
+      th Value
+  tbody
+    tr
+      td Yearly
+      td#ch01s03yearly -
+    tr
+      td Monthly
+      td#ch01s03monthly -
+    tr
+      td Daily (non bisect yrs.)
+      td#ch01s03daily -
+    tr
+      td Each 
+        input(type='number', id='ch01s03interval', size='4', value='1440', style='width:3em')
+        | minutes
+      td#ch01s03custom -
+
+script.
+  (function() {
+    var $ = require('jquery');
+
+    var $amount   = $('#ch01s02amount');
+    var $interest = $('#ch01s02interest');
+    var $years    = $('#ch01s02years');
+    var $interval = $('#ch01s03interval');
+    var $total = $('#ch01s02total');
+
+    var $yearly   = $('#ch01s03yearly');
+    var $monthly  = $('#ch01s03monthly');
+    var $daily    = $('#ch01s03daily');
+    var $ideal    = $('#ch01s03ideal');
+    var $custom    = $('#ch01s03custom');
+
+    var onChange = function () {
+      var amount = parseFloat($amount.val());
+      var interest = parseFloat($interest.val());
+      var years = parseFloat($years.val());
+      var interval = parseFloat($interval.val());
+
+      function getAmount(divisions) {
+          return (amount * Math.pow((1 + interest/divisions/100), years*divisions));
+      }
+
+      var yearly  = getAmount(1);
+      var monthly = getAmount(12);
+      var daily   = getAmount(365);
+      var ideal   = parseFloat((amount * Math.exp(interest/100*years)).toFixed(5));
+
+      var interval = getAmount(365*24*60 / interval);
+
+      $total.text(isNaN(yearly)?'-': yearly.toFixed(2));
+      $yearly.text(isNaN(yearly) ? "-" : yearly.toFixed(2));
+      $monthly.text(isNaN(monthly) ? "-" : monthly.toFixed(2));
+      $daily.text(isNaN(daily) ? "-" : daily.toFixed(2));
+      $ideal.text(isNaN(ideal) ? "-" : ideal.toFixed(2));
+      $custom.text(isNaN(interval) ? "-" : interval.toFixed(4)+ ' (that is ' + ((ideal - interval) * 100).toFixed(4) + ' cents less than the ideal)');
+
+    }
+
+    $amount.on('keyup', onChange);
+    $interest.on('keyup', onChange);
+    $years.on('keyup', onChange);
+    $interval.on('keyup', onChange);
+
+    onChange();
+  })();
+h3
+  strong Test your knowledge
+
+.choices
+  +exercise({name: 'compound00'})
+    .progress-box
+    span
+      span.score-box
+    +yesno({name: 'compound01', answer: true, yes: 'With Compounding', no: 'No Compounding'})
+      .statement 1. When you deposit money, which type of interest is more beneficial to you?
+      .row
+        .col-md-2
+        .col-md-8 
+
+    +yesno({name: 'compound02', answer: false, no: 'Continuous', yes: 'Daily'})
+      .statement 2. What type of compounding returns the most interest?
+
+    +calcuwords({name: 'm03', words: [
+        ['£', '2?', '4?', '2?']
+      ]})
+      .statement 3. If you deposit £ 200 at 10% yearly compounded interest, at the end of the second year you will have
+        .calcugrid.inline-block.center-block(style='max-width:8em;')
+
+    .comment-on-done
+      p Well done! You're now ready for the next chapter!
+    +pickone(3, ['Yes!', 'Hmm... No.', 'Well, it depends.'], {
+          hints: {
+            1: 'Do not be quick to take a decision.',
+            2: 'Financials cannot be this easy.'
+          },
+          placeholder: 'Pick an answer here',
+          name: 'intro1',
+          placement: 'top'
+        })
+        .statement
+          span 4
+          | Do you think it's better to get £ 2000 for your work on a project now
+          | or accept the customer's proposal and get £ 2350 in twelve months time?
+
+        .trigger.btn.btn-lg.btn-info.center-block(style='width:15em')
+
+        .comment-on-done.clearfix
+          p
+            |Indeed, it depends. It depends on your current needs, on the market
+            | environment, how much you can make with the money you get now or
+            | how risk prone or adverse you are.
+            br
+            | For example, if you want to put the money in the bank, it is better
+            | to wait for a year and get the £ 2350 instead, which is more than the
+            | bank will give you.
+            br
+            | but, if you want to use the amount to invest in a business which will
+            | give you back three times as more (with significant risks), take
+            | the money now.
+
+    +choices({name:'recap01', auto: false})
+      .statement
+        span 5. 
+        | A difference of 0.5% interest when taking a credit seems negligible.
+        | What do you expect the total cost increase of a £50k credit over 25 years to be,
+        | when the interest is 6.5% instead of 6.0% per annum?
+
+      .comment Imagine you hold a 1 mile long stick (or a laser pointer, to be more
+        | realstic). If your hand moves 1 inch, the other end will move more than 100 m.
+        | Also, interest is generally compound, which amplifies the effect even more.
+        | For this example the total amount paid for the credit at 6.5% is 
+        | £ 101'281 vs. £96'645 at 6%.
+      .answers
+        .A around £250, i.e. 0.5% of £50,000.
+        .B £3250, i.e. 6.5% of £50000.
+        .C.correct around £5000, the price of a compact car. 
+        .D Let the bank decide.
