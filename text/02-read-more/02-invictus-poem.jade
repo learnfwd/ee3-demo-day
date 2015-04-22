@@ -28,3 +28,14 @@
     +img("img/William_Ernest_Henley_Vanity_Fair.jpg")
     .small-text 
       em Portrait of William Ernest Henley by Leslie Ward published in Vanity Fair 26 November 
++exercise({name: 'invictus'})
+  strong Test your knowledge
+  .progress-box
+  +textline({name: 'invictus_1', type: 'text', max: 50,
+      size: 25, regexp: /^\s*William Ernest Henley\s*$/,
+      title: 'Is it Bucharest, Timișoara, Belgrade, Budapest?'
+    })
+    +statement
+      | 1. "Invictus" is a short Victorian poem by the English poet 
+      span.input
+      span.is-done-box
