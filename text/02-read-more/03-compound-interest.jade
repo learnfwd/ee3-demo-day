@@ -49,27 +49,27 @@ form(onSubmit='return false;')
     strong#ch01s03ideal -
     | .
 p Feel free to input less than 1 minute in the box below.
-
-.table-responsive: table
-  thead
-    tr
-      th Payment frequency
-      th Value
-  tbody
-    tr
-      td Yearly
-      td#ch01s03yearly -
-    tr
-      td Monthly
-      td#ch01s03monthly -
-    tr
-      td Daily (non bisect yrs.)
-      td#ch01s03daily -
-    tr
-      td Each 
-        input(type='number', id='ch01s03interval', size='4', value='1440', style='width:3em')
-        | minutes
-      td#ch01s03custom -
+.compound
+  .table-responsive: table
+    thead
+      tr
+        th Payment frequency
+        th Value
+    tbody
+      tr
+        td Yearly
+        td#ch01s03yearly -
+      tr
+        td Monthly
+        td#ch01s03monthly -
+      tr
+        td Daily (non bisect yrs.)
+        td#ch01s03daily -
+      tr
+        td Each 
+          input(type='number', id='ch01s03interval', size='4', value='1440', style='width:3em')
+          | minutes
+        td#ch01s03custom -
 
 script.
   (function() {
