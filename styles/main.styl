@@ -5,6 +5,12 @@ highlight = #f60
 orange = #fbb03b
 green = #8cc63f
 
+html, body, article, section, #textbook
+  min-height: 100% !important
+
+body #scrollview
+  padding-bottom: 0
+
 body
   user-select: none
   background-image: url('img/green-fibers.png')
@@ -17,12 +23,12 @@ body
 
 // Cover page
 #textbook
-  background: rgba(255,255,255,1)
+  background: #424242
   width: 100% !important
 
 #home-cover
-  background: url('img/bg/14625076141_d0f2e43579_b.jpg') #b2bcb1 no-repeat
-  background-size: cover
+  background: #FFFDE7 no-repeat
+  // background-size: cover
   // background-position: right top 
   min-height: 100vh
   .goto
@@ -31,7 +37,7 @@ body
     padding-top: 1em
     padding-bottom: 1.5em
     color: white
-    background: black
+    background: #424242
     p
       font-size: 2.5em
       display: inline-block
@@ -206,14 +212,38 @@ body
   min-height: 100vh
   align-items: center
   justify-content: center
+  padding: 0
+  margin: 0
   &.red
     background-color: #F44336
     color: white
   &.blue
     background-color: #3F51B5
     color: white
+  &.teal
+    background-color: #009688
+    color: white
 
   .question
+    margin: 0.1em auto
     padding: 0
-    margin: 0
     font-size: 3em
+    line-height: 110%
+    text-align: center
+    &.box
+      border: 1px solid white
+      display: inline-block
+      padding: 0.2em
+
+  @media (max-width: 767px)
+    min-height: 85vh
+    .question
+      font-size: 2em
+      padding: 0.2em
+
+  span.underline
+    border-bottom: 0.1em solid white
+
+  span.strikethrough
+    text-decoration:line-through !important
+    color: rgba(255,255,255,0.5)
