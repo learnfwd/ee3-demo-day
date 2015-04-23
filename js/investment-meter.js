@@ -22,6 +22,9 @@ function onChange() {
 
   var $progress = $('.investment-progress');
   $progress.css('width', ratio * 100 + '%');
+
+  var $amount = $('.investment-amount');
+  $amount.html('£' + amount + 'k');
 }
 
 PeerDataStore.bindExerciseChanged(exercise, onChange);
