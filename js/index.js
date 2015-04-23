@@ -5,6 +5,7 @@ var App = require('lfa-core/app');
 var FakeNameGenerator = require('./fake-name-generator');
 var React = require('react');
 require('./asset-preloader'); // no need to store
+require('./investment-meter');
 
 FakeNameGenerator.registerRandomName();
 
