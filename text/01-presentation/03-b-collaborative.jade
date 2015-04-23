@@ -5,17 +5,34 @@
     .header.full
       p Collaborative
 
+    p
+      strong Can a teacher interact with students?
+
+
     center
-      +textline({name: 'ee3-demo-collaborative-1', type: 'text', max: 10,
-        size: 10, regexp: /^\s*[s|S][e|E][r|R][v|V][i|I][c|C][e|E].*$/,
-        placeholder: 'type here...', ignoreAvatar:false})
-          p.center Best textbooks are
-          span.inline-block.input
-          span.inline-block.is-done-box
-      +textline({name: 'ee3-demo-collaborative-2', type: 'text', max: 10,
-        size: 10, regexp: /^\s*[p|P][r|R][o|O][d|D][u|U][c|C][t|T][s|S]\s*$/,
-        placeholder: 'type here...', ignoreAvatar:false})
-          p.center not
-          span.inline-block.input
-          span.inline-block.is-done-box
-      p &nbsp;
+      +pickone(2, ['products', 'services', 'sandwiches'], {
+        name: 'ee3-demo-collaborative-X',
+        ignoreAvatar:false,
+        hints: {
+          1: 'Haha, no!',
+          2: 'No, no, no! :)'
+        },
+        firstTimeDoneMessage: 'Indeed! Services.',
+        doneMessage: 'Good job! Again. :)'
+      })
+        | What should textbooks become instead of products/artefacts?
+        br
+
+    p
+      strong Can their text appear on the screen?
+
+
+    +textline({name: 'ee3-demo-collaborative-2', type: 'text', max: 10,
+      size: 10, regexp: /^\s*\w\w\w+\s*$/,
+      placeholder: 'type here...', ignoreAvatar:false,
+      firstTimeDoneMessage: 'Thanks for sharing!',
+      })
+        p Where were you born?
+        span.inline-block.input
+        span.inline-block.is-done-box
+    p &nbsp;
