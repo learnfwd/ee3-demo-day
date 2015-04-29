@@ -13,7 +13,10 @@ function onChange() {
   var amount = 0;
   _.each(data, function (value) {
     try {
-      amount += amounts[value.state];
+      var sum = amounts[value.state];
+      if (typeof(sum) === 'number' && !isNaN(sum)) {
+        amount += sum;
+      }
     } catch (ex) {}
   });
 
@@ -25,9 +28,16 @@ function onChange() {
 
   var $amount = $('.investment-amount');
   $amount.html('£' + amount + 'k');
+
 }
 
 PeerDataStore.bindExerciseChanged(exercise, onChange);
-PeerDataStore.fetchForExercise(exerciseId);
-
 App.book.on('render', onChange);
+
+function fetch() {
+  PeerDataStore.fetchForExercise(exerciseId);
+}
+
+App.book.on('render', fetch);
+fetch();
+
