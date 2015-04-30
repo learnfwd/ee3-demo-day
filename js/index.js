@@ -1,6 +1,7 @@
 'use strict';
 /*global require*/
 
+var $ = require('jquery');
 var App = require('lfa-core/app');
 var FakeNameGenerator = require('./fake-name-generator');
 var React = require('react');
@@ -33,3 +34,7 @@ App.book.on('render', function (/*opts*/) {
     );
   }
 });
+
+if (App.storage.getItem('clientId') === 'learnfwd-teacher') {
+  $('html').addClass('classroom-is-teacher');
+}

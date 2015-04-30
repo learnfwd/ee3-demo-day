@@ -1,9 +1,17 @@
 @import _avatar
 @import _read_more
+@import investment
+
 // colors
 highlight = #f60
 orange = #fbb03b
 green = #8cc63f
+
+.classroom-teacher-visible
+  display: none
+
+.classroom-is-teacher .classroom-teacher-visible
+  display: block
 
 .colored-box
   min-height: 100vh
@@ -294,17 +302,4 @@ body
       
   .col-white
     background-color: white
-
-  .investment-container
-    position: relative
-
-  .investment-progress
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: 0
-    background-color: #000
-    opacity: 0.2
-    transition: width 0.5s ease
 

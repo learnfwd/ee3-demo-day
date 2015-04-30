@@ -1,0 +1,23 @@
+.investment-container
+  position: relative
+  height: 2em
+  margin-left: 0.5em
+  margin-right: 0.5em
+  border: 0.1em solid #fff
+
+.investment-amount
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  color: #fff
+  transition: color 0.5s ease
+
+  &.investment-over-half
+    color: #222
+
+.investment-progress
+  height: 100%
+  width: 0
+  background-color: #fff
+  transition: width 0.5s ease
