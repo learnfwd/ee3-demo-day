@@ -91,219 +91,220 @@ body
         margin: 0.5em 0.5em 0 0.5em
         font-size: 2em
 
-.header
-  // background: black
-  display: block
-  padding: 1em
-  text-align: center
-  margin-bottom: 2em
-  p
-    display: inline-block
-    font-size: 1.5em
-    border: 1px solid black
-    border-left: 5px solid green
-    padding: .5em
-    margin: 0em
-    text-align: right
+#textbook
+  .header
+    // background: black
+    display: block
+    padding: 1em
+    text-align: center
+    margin-bottom: 2em
+    p
+      display: inline-block
+      font-size: 1.5em
+      border: 1px solid black
+      border-left: 5px solid green
+      padding: .5em
+      margin: 0em
+      text-align: right
+      
+  // Exercises
+
+  .ee3-demo-investors-buttons
+    button:focus, button:active
+      outline: 0 !important;
+      
+    .pickone-button-item
+      font-size: 1.2em;
+      margin: 0 10px 20px 10px
+      padding 10px 1.5em
+
     
-// Exercises
-
-.ee3-demo-investors-buttons
-  button:focus, button:active
-    outline: 0 !important;
-    
-  .pickone-button-item
-    font-size: 1.2em;
-    margin: 0 10px 20px 10px
-    padding 10px 1.5em
-
-  
-.question
-  font-size: 2em
-  text-align: center
-  margin-top: 1em
-  margin-bottom: 1em
-
-.img-circle
-  border: 5px solid green
-  &.textbooks
-    border: 5px solid orange
-
-.not
-  color: black
-  font-size: 1.5em
-  .fa
-    color: orange
-
-.cool
-  color: black
-  font-size: 1.5em
-  .fa
-    color: green
-  
-
-.margin-top
-  margin-top: 2em
-
-.orange
-  color: orange
-.green
-  color: green
-
-.vertical-align
-  display: flex
-  align-items: center
-
-
-@import '01.03.how-it-works'
-
-.scissors
-  display: flex
-  align-items: center
-  justify-content: center
-  img
-    max-width: 200px
-    max-height: 200px
-    
-#laptop-works
-  ul
+  .question
+    font-size: 2em
+    text-align: center
     margin-top: 1em
+    margin-bottom: 1em
 
-.row-box
-  border: 1px solid black
-  margin-bottom: 1em
-  
-.tier-box
-  border: 1px dashed black
-  margin-bottom: 1em
-  padding: 0.8em
-  text-align: center
-  &.tier2
+  .img-circle
+    border: 5px solid green
+    &.textbooks
+      border: 5px solid orange
+
+  .not
+    color: black
+    font-size: 1.5em
+    .fa
+      color: orange
+
+  .cool
+    color: black
+    font-size: 1.5em
+    .fa
+      color: green
+    
+
+  .margin-top
+    margin-top: 2em
+
+  .orange
+    color: orange
+  .green
+    color: green
+
+  .vertical-align
+    display: flex
+    align-items: center
+
+
+  @import '01.03.how-it-works'
+
+  .scissors
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 200px
+      max-height: 200px
+      
+#laptop-works
+    ul
+      margin-top: 1em
+
+  .row-box
     border: 1px solid black
-  p 
+    margin-bottom: 1em
+    
+  .tier-box
+    border: 1px dashed black
+    margin-bottom: 1em
+    padding: 0.8em
+    text-align: center
+    &.tier2
+      border: 1px solid black
+    p 
+      padding: 0
+      margin: 0
+      &.tier
+        font-size: 1em
+      &.text
+        font-size: 1em
+  .center
+    text-align: center
+
+  .inline
+    display: inline-block
+    border: 1px dashed black
+    padding: 0.3em
+
+  .teacher-unvisible
+    display: none
+
+  .box
+    // background: black
+    display: block
+    padding: 1em
+    text-align: center
+    margin-bottom: 2em
+    p
+      display: inline-block
+      font-size: 1.5em
+      border: 1px solid black
+      // border-left: 5px solid green
+      padding: .5em
+      margin: 0em
+      text-align: right
+
+  .colored-box
+    display: flex
+    min-height: 100vh
+    align-items: center
+    justify-content: center
     padding: 0
     margin: 0
-    &.tier
-      font-size: 1em
-    &.text
-      font-size: 1em
-.center
-  text-align: center
+    &.red
+      background-color: #F44336
+      color: white
+    &.blue
+      background-color: #3F51B5
+      color: white
+    &.teal
+      background-color: #009688
+      color: white
+    &.green
+      background-color: #1B5E20
+      color: white
+    &.light-green
+      background-color: #33691E
+      color: white
+    &.orange
+      background-color: #BF360C
+      color: white
+    &.light-blue
+      background-color: #01579B
+      color: white
+    &.brown
+      background-color: #4E342E
+      color: white
+    &.indigo
+      background-color: #3F51B5
+      color: white
+    
 
-.inline
-  display: inline-block
-  border: 1px dashed black
-  padding: 0.3em
-
-.teacher-unvisible
-  display: none
-
-.box
-  // background: black
-  display: block
-  padding: 1em
-  text-align: center
-  margin-bottom: 2em
-  p
-    display: inline-block
-    font-size: 1.5em
-    border: 1px solid black
-    // border-left: 5px solid green
-    padding: .5em
-    margin: 0em
-    text-align: right
-
-.colored-box
-  display: flex
-  min-height: 100vh
-  align-items: center
-  justify-content: center
-  padding: 0
-  margin: 0
-  &.red
-    background-color: #F44336
-    color: white
-  &.blue
-    background-color: #3F51B5
-    color: white
-  &.teal
-    background-color: #009688
-    color: white
-  &.green
-    background-color: #1B5E20
-    color: white
-  &.light-green
-    background-color: #33691E
-    color: white
-  &.orange
-    background-color: #BF360C
-    color: white
-  &.light-blue
-    background-color: #01579B
-    color: white
-  &.brown
-    background-color: #4E342E
-    color: white
-  &.indigo
-    background-color: #3F51B5
-    color: white
-  
-
-  .question
-    margin: 0.1em auto
-    padding: 0
-    font-size: 3em
-    line-height: 110%
-    text-align: center
-    &.box
-      border: 1px solid white
-      display: inline-block
-      padding: 0.2em
-    &.margin-top
-      margin-top: 2em
-
-  @media (max-width: 767px)
-    min-height: 85vh
     .question
-      font-size: 2em
-      padding: 0.2em
+      margin: 0.1em auto
+      padding: 0
+      font-size: 3em
+      line-height: 110%
+      text-align: center
+      &.box
+        border: 1px solid white
+        display: inline-block
+        padding: 0.2em
+      &.margin-top
+        margin-top: 2em
 
-  span.underline
-    border-bottom: 0.1em solid white
+    @media (max-width: 767px)
+      min-height: 85vh
+      .question
+        font-size: 2em
+        padding: 0.2em
 
-  span.strikethrough
-    text-decoration:line-through !important
-    color: rgba(255,255,255,0.5)
+    span.underline
+      border-bottom: 0.1em solid white
 
-.flex
-  height: 100%
-  display: flex
-  align-content: center
-  justify-content: center
-  .pickone-buttons
+    span.strikethrough
+      text-decoration:line-through !important
+      color: rgba(255,255,255,0.5)
+
+  .flex
+    height: 100%
     display: flex
     align-content: center
     justify-content: center
-    flex-wrap: wrap
+    .pickone-buttons
+      display: flex
+      align-content: center
+      justify-content: center
+      flex-wrap: wrap
 
-.ee3-demo-invest-dashboard
-  .classroom-dashboard-panel
-    background: transparent
-    border: 1px dashed white
-    
-.col-white
-  background-color: white
+  .ee3-demo-invest-dashboard
+    .classroom-dashboard-panel
+      background: transparent
+      border: 1px dashed white
+      
+  .col-white
+    background-color: white
 
-.investment-container
-  position: relative
+  .investment-container
+    position: relative
 
-.investment-progress
-  position: absolute
-  top: 0
-  left: 0
-  height: 100%
-  width: 0
-  background-color: #000
-  opacity: 0.2
-  transition: width 0.5s ease
+  .investment-progress
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 0
+    background-color: #000
+    opacity: 0.2
+    transition: width 0.5s ease
 
