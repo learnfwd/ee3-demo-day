@@ -1,6 +1,6 @@
 'use strict';
 /* global require */
-var App = require('lfa-core/app');
+var App = require('lfa-core').App;
 
 var assets = [
   'img/avatar/kat-angry.png',

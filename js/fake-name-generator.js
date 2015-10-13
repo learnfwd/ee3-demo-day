@@ -6,9 +6,9 @@ var fakeNames =  {
 var firstNameCount = fakeNames.first.length;
 var lastNameCount = fakeNames.last.length;
 
-var App = require('lfa-core/app');
-var ClassroomStore = require('lfa-classroom/classroom-store');
-var ClasroomActions = require('lfa-classroom/classroom-actions');
+var App = require('lfa-core').App;
+var ClassroomStore = require('lfa-classroom').ClassroomStore;
+var ClasroomActions = require('lfa-classroom').ClassroomActions;
 
 function generateRandomName() {
   return  fakeNames.first[Math.floor(Math.random() * firstNameCount)] + ' ' +

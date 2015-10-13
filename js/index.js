@@ -9,12 +9,11 @@ var FakeNameGenerator = require('./fake-name-generator');
 var React = require('react');
 
 require('./asset-preloader'); // no need to store
-require('./investment-meter');
 
 FakeNameGenerator.registerRandomName();
 
-var ClassMateList = require('lfa-classroom/views/classmate-list');
-var NameInput = require('lfa-classroom/views/name-input');
+var ClassMateList = require('lfa-classroom').ClassmateList;
+var NameInput = require('lfa-classroom').NameInput;
 
 Storage.setItem('classroomCode', 'ee3');
 Storage.setItem('classroomAutoconnect', 'true');
