@@ -2,9 +2,12 @@
 /*global require*/
 
 var $ = require('jquery');
-var App = require('lfa-core/app');
+var App = require('lfa-core').App;
+var Storage = require('lfa-core').Storage;
+
 var FakeNameGenerator = require('./fake-name-generator');
 var React = require('react');
+
 require('./asset-preloader'); // no need to store
 require('./investment-meter');
 
@@ -13,8 +16,8 @@ FakeNameGenerator.registerRandomName();
 var ClassMateList = require('lfa-classroom/views/classmate-list');
 var NameInput = require('lfa-classroom/views/name-input');
 
-App.storage.setItem('classroomCode', 'ee3');
-App.storage.setItem('classroomAutoconnect', 'true');
+Storage.setItem('classroomCode', 'ee3');
+Storage.setItem('classroomAutoconnect', 'true');
 
 App.book.on('render', function (/*opts*/) {
 
@@ -35,6 +38,6 @@ App.book.on('render', function (/*opts*/) {
   }
 });
 
-if (App.storage.getItem('clientId') === 'learnfwd-teacher') {
+if (Storage.getItem('clientId') === 'learnfwd-teacher') {
   $('html').addClass('classroom-is-teacher');
 }

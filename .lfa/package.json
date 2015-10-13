@@ -1,14 +1,14 @@
 {
-  "name": "ee3-demo-day",
+  "name": "fbf15-demo",
   "version": "1.0.0",
   "keywords": [
     "lfa-book"
   ],
   "book": {
-    "title": "EE3 Demo Day",
+    "title": "Frankfurt Bookfair Demo",
     "language": "en"
   },
   "engines": {
-    "lfa": "~0.7.0"
+    "lfa": "^0.8.0"
   }
 }
